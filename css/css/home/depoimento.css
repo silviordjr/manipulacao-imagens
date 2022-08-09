@@ -1,0 +1,114 @@
+.depoimento {
+   display: none;
+}
+
+.depoimento.primeiro.ativo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--cor-p1);
+  overflow: hidden;
+  animation: slide-quote 1s forwards;
+}
+
+.depoimento.segundo.ativo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--cor-a1);
+  overflow: hidden;
+  animation: slide-quote 1s forwards;
+}
+
+.depoimento.terceiro.ativo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--cor-a2);
+  overflow: hidden;
+  animation: slide-quote 1s forwards;
+}
+
+.depoimento img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0px;
+}
+
+.depoimento-conteudo {
+  padding: 40px 40px 80px 80px;
+  align-self: end;
+  background: url("../../img/dec/bottom-right-p.svg") no-repeat bottom 40px
+    right 40px;
+}
+
+.depoimento-conteudo p {
+  max-width: 32ch;
+  font-family: "Merriweather", serif;
+  font-style: italic;
+  font-weight: 900;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.depoimento p::before,
+.depoimento p::after {
+  font-size: 5rem;
+  color: var(--cor-p2);
+  position: absolute;
+}
+
+.depoimento p::before {
+  content: "“";
+  left: -50px;
+  top: -20px;
+}
+
+.depoimento p::after {
+  content: "”";
+}
+
+@keyframes slide-quote {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .depoimento img {
+    max-height: 520px;
+  }
+}
+
+@media (max-width: 800px) {
+  .depoimento.primeiro.ativo {
+    grid-template-columns: 1fr;
+    text-align: center;
+    height: 120vh;
+  }
+  .depoimento.segundo.ativo {
+    grid-template-columns: 1fr;
+    text-align: center;
+    height: 120vh;
+  }
+  .depoimento.terceiro.ativo {
+    grid-template-columns: 1fr;
+    text-align: center;
+    height: 120vh;
+  }
+  .depoimento img {
+    max-height: 100%;
+  }
+  .depoimento-conteudo {
+    padding: 20px 10px;
+    margin: auto;
+    margin-left: 40px;
+    background: url("../../img/dec/bottom-right-p.svg") no-repeat bottom 0px
+    right 40px;
+  }
+  
+}
