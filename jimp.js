@@ -15,16 +15,16 @@ const pasta = fs.readdirSync('./imagens/')
 pasta.forEach((imagem, index) => {
     Jimp.read(`imagens/${imagem}`)
     .then((img) => {
-        img.resize(980, 1400).write(`otimizadas/img_${index}_grande.jpg`)
+        img.resize(1200, 700).write(`otimizadas/img_${index}_grande.jpg`)
     })
 })
 
-pasta.forEach((imagem, index) => {
-    Jimp.read(`imagens/${imagem}`)
-    .then((img) => {
-        img.greyscale().write(`otimizadas/img_${index}_grey.jpg`)
-    })
-})
+// pasta.forEach((imagem, index) => {
+//     Jimp.read(`imagens/${imagem}`)
+//     .then((img) => {
+//         img.greyscale().write(`otimizadas/img_${index}_grey.jpg`)
+//     })
+// })
 
 pasta.forEach((imagem, index) => {
     Jimp.read(`imagens/${imagem}`)

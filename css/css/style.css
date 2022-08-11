@@ -1,0 +1,36 @@
+@import "./global/global.css";
+@import "./utilidades/tipografia.css";
+@import "./utilidades/cores.css";
+
+@import "./global/header.css";
+@import "./global/footer.css";
+
+/* Utilidades */
+@import "./utilidades/componentes.css";
+@import "./utilidades/formulario.css";
+
+/* Home */
+@import "./home/introducao.css";
+@import "./home/eventos.css";
+@import "./home/parceiros.css";
+@import "./home/depoimento.css";
+
+/* Bicicletas */
+@import "./hostel/pacotes-lista.css";
+@import "./hostel/hostel.css";
+
+/* Bicicleta */
+@import "./hostel-serv/hostel-serv.css";
+
+/* Seguros */
+@import "./eventos-camp/eventos-camp.css";
+@import "./eventos-camp/vantagens.css";
+@import "./eventos-camp/perguntas.css";
+
+/* Contato */
+@import "./contato/contato.css";
+@import "./contato/lojas.css";
+
+/* menu mobile */
+
+@import "./utilidades/menu-mobile.css";
